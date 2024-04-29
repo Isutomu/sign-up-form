@@ -1,0 +1,218 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+
+@font-face {
+  font-family: 'norse-bold';
+  src: 
+    url('fonts/norse-bold-webfont.woff') format('woff'),
+    url('fonts/norse-bold-webfont.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+::root {
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.hero {
+  flex: 0 0 30vw;
+  position: relative;
+}
+
+.odin-logo {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 20%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.44)
+}
+
+.odin-logo > img {
+  display: inline-block;
+  height: 100px;
+  width: auto;
+
+}
+
+.odin-logo > span {
+  color: white;
+  font-size: 7rem;
+  font-family: 'norse-bold';
+}
+
+.img-credits {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  color: white;
+  margin: 0 auto;
+  a {
+    color: inherit;
+  }
+}
+
+.plant {
+  height: 100vh;
+}
+
+main {
+  background-color: #f9fafb;
+  
+  /* com flex isso pode sair */
+  height: 100%;
+
+
+  flex-grow: 1 1 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: center;
+  gap: 3vh;
+}
+
+main > * {
+  flex: 0 0 100px;
+  padding-left: 2.5vw;
+}
+
+.presentation {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 70%;
+}
+
+.coercion {
+  margin-top: 20px;
+}
+
+.form {
+  background-color: white;
+  box-shadow: 3px 5px 5px lightgrey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+form {
+  flex-grow: 1;
+  padding: 2vh 0 3vh 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.1rem;
+  label {
+    display: block;
+    letter-spacing: .1rem;
+  }
+  align-items: center;
+}
+
+.entry {
+  flex: 0 0 40%;
+  padding: 1vh 0;
+  input {
+    width: 400px;
+  }
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  font-size: 1.5rem;
+  padding: 2px 10px;
+}
+
+input:user-invalid,
+#password.dont-match {
+  border: 1px rgb(241, 72, 72) solid;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid rgb(58, 58, 229);
+  box-shadow: 3px 3px 5px lightgray;
+}
+
+.incorrect-password {
+  color: white;
+  font-size: 0.8rem;
+  display: block;
+}
+
+.incorrect-password.dont-match {
+  color: red;
+}
+
+button {
+  background-color: #596D48;
+  color: white;
+  font-size: 1.5rem;
+  padding: .5rem 4rem;
+  border-radius: 12px;
+  border: 1px solid #596D48;
+  box-shadow: 3px 3px 5px lightgray;
+  margin-bottom: 2.5vh;
+}
+
+button:hover {
+  background-color: #637950;
+}
+
+button:active {
+    box-shadow: inset 2px 2px #465538;
+}
+
+button +span {
+  a {
+    color: #596D48;
+    text-decoration: none;
+  }
+  display: block;
+  font-size: 1.5rem;
+}
